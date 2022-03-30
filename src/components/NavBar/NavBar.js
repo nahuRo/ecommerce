@@ -1,6 +1,7 @@
 import './NavBar.css'
 
 import Navegacion from '../Navegacion/Navegacion'
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return(
@@ -10,6 +11,9 @@ const NavBar = () => {
             </div>
             <div>
                 <Navegacion/>
+            </div>
+            <div>
+                <CartWidget/>
             </div>
         </nav>
     )
