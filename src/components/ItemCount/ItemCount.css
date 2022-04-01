@@ -1,0 +1,36 @@
+.count{
+    margin: 0 auto;
+    background-color: antiquewhite;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contBtnCount{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: 5px auto;
+}
+.btnCount{
+    background-color: brown;
+    padding: 5px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btnAddProd{
+    border: none;
+    background-color: burlywood;
+    padding: 6px;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btnAddProd:hover{
+    background-color: rgb(237, 172, 88);
+}
