@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import { getProd } from '../../productos' //traigo la funcion getProduct
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({greeting}) => {
     const [products, setProducts]=useState([]) //use el useState para guardar esos productos que recibo por la promesa
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const ItemListContainer = (props) => {
     
     return(
         <>
-            <h1>{props.greeting}</h1>
+            <h1>{greeting}</h1>
             <ItemList listadoProd={products}/>
         </>
     )

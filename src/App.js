@@ -16,7 +16,7 @@ function App() {
                 <NavBar/>
             </header>
             <main>
-                <ItemListContainer cantWidget={1} greeting = 'Saludo desde itemListContainer'/>
+                <ItemListContainer greeting = 'Saludo desde itemListContainer'/>
                 <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>
             </main>
         </div>
