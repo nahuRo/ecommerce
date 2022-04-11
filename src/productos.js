@@ -1,8 +1,7 @@
 const products = [
     {
         'id': 1,
-        'name': 'Galaxy A22',
-        'marca': 'Samsung',
+        'name': 'Samsung Galaxy A22',
         'img':'https://samsungar.vtexassets.com/arquivos/ids/173072-1200-auto?width=1200&height=auto&aspect=true',
         'price': 44900,
         'description': `Mejora la velocidad y el rendimiento con procesador Octa-core y 4GB de memoria RAM.
@@ -12,8 +11,7 @@ const products = [
     },
     {
         'id': 2,
-        'name': 'Galaxy M12',
-        'marca': 'Samsung',
+        'name': 'Samsung Galaxy M12',
         'img':'https://samsungar.vtexassets.com/arquivos/ids/169269-1200-auto?width=1200&height=auto&aspect=true',
         'price': 40900,
         'description': `Disfrutá de tu contenido en la pantalla Infinity-V de 6.5".
@@ -23,8 +21,7 @@ const products = [
     },
     {
         'id': 3,
-        'name': 'Galaxy A32',
-        'marca': 'Samsung',
+        'name': 'Samsung Galaxy A32',
         'img':'https://samsungar.vtexassets.com/arquivos/ids/168737-800-auto?width=800&height=auto&aspect=true',
         'price': 50900,
         'description': `Diseño minimalista y acabado brillante
@@ -41,6 +38,14 @@ export const getProd = () => { // export nombrado
     return new Promise(resolve => {
         setTimeout(() => {
             resolve(products)
+        }, 2000);
+    })
+}
+
+export const getProdById = () => { // export nombrado
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(products.find(e => e.id === 2))
         }, 2000);
     })
 }
