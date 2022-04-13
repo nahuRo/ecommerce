@@ -7,6 +7,23 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
+    background-color: #314247;
     height: 3rem;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.active{
+    background-color: #647973;
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+}
+.notActive{
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
 }

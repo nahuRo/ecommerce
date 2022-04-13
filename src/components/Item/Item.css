@@ -1,8 +1,7 @@
 .myCard{
-    background-color: bisque;
+    background-color: #fff;
     width: 300px;
     height: 450px;
-    border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -30,14 +29,19 @@
     justify-content: center;
     align-items: center;
     height: 15%;
+    text-align: center;
 }
-.contBtnCard button{
+.contBtnCard > div{
+    width: 30%;
+}
+.contBtnCard button,.contBtnCard a{
     padding: 10px;
     border: 1px solid #fff;
     border-radius: 5px;
-    background-color: antiquewhite;
+    background-color: #e5e7eb;
     cursor: pointer;
+    text-decoration: none;
 }
-.contBtnCard button:hover{
-    background-color: rgb(227, 159, 76);
+.contBtnCard button:hover,.contBtnCard a:hover{
+    background-color: #c7c9ce;
 }
