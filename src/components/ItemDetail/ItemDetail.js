@@ -1,8 +1,17 @@
 import "./ItemDetail.css";
-
+import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const ItemDetail = ( {listadoDetail} ) => {
-  	// desestructuro las propiedades que voy a usar
+
+	const [ canti, setCanti ] = useState(0)
+
+	const cantidadProd = (cant) => {
+		console.log(`${cant} cantidad de productos agregados al carrito`)
+		setCanti(cant)
+	}
+
   	return (
     // card del detalle
 		<div className="myCardDetail">
@@ -16,6 +25,9 @@ const ItemDetail = ( {listadoDetail} ) => {
 				<div className="contBtnCard">
 					<button>Comprar</button>
 				</div>
+			</div>
+			<div>
+				{canti > 0 ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
 			</div>
 		</div>
   	);
