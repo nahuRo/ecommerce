@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom'
 
 import NavBar from './components/NavBar/NavBar';
 import PieDePagina from './components/PieDePagina/PieDePagina';
-// import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
 
