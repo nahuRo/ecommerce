@@ -4,6 +4,7 @@ import { getProd } from '../../productos' //traigo la funcion getProduct
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({greeting}) => {
+
     const [products, setProducts] = useState([]) //use el useState para guardar esos productos que recibo por la promesa
 
     const { productMarc } = useParams()

@@ -1,16 +1,22 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 const ItemDetail = ( {listadoDetail} ) => {
 
-	const [ canti, setCanti ] = useState(0)
+	const [ cantidad, setCantidad ] = useState(0)
+
+	const { cart, setCart } = useContext(CartContext)
 
 	const cantidadProd = (cant) => {
-		console.log(`${cant} cantidad de productos agregados al carrito`)
-		setCanti(cant)
+		setCantidad(cant)
+		setCart([...cart, {...listadoDetail, cantidad:cant}])
 	}
+
+	console.log(cart)
+
 
   	return (
     // card del detalle
@@ -27,7 +33,7 @@ const ItemDetail = ( {listadoDetail} ) => {
 				</div>
 			</div>
 			<div>
-				{canti > 0 ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
+				{cantidad > 0 ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
 			</div>
 		</div>
   	);
