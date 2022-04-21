@@ -6,17 +6,11 @@ import CartContext from "../../context/CartContext";
 
 const ItemDetail = ( {listadoDetail} ) => {
 
-	const [ cantidad, setCantidad ] = useState(0)
-
-	const { cart, setCart } = useContext(CartContext)
+	const { addProd, IsInCart } = useContext(CartContext)
 
 	const cantidadProd = (cant) => {
-		setCantidad(cant)
-		setCart([...cart, {...listadoDetail, cantidad:cant}])
+		addProd({...listadoDetail, cantidad:cant})
 	}
-
-	console.log(cart)
-
 
   	return (
     // card del detalle
@@ -33,7 +27,7 @@ const ItemDetail = ( {listadoDetail} ) => {
 				</div>
 			</div>
 			<div>
-				{cantidad > 0 ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
+				{ IsInCart(listadoDetail.id) ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
 			</div>
 		</div>
   	);
