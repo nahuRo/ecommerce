@@ -7,6 +7,7 @@ const ItemDetailContainer = () => {
     const [detail, setDetail]=useState([]) //use el useState para guardar esos productos que recibo por la promesa
 
     const { productId } = useParams() // es la propiedad que setea una ruta dinamica
+    
     useEffect(() => {
         getProdById(productId).then(respuesta => { // con .then manejo la respuesta sucess de esa promesa
             setDetail(respuesta) // lleno el primer espacio del state con un array de los productos que me devolvio la promesa
@@ -15,7 +16,7 @@ const ItemDetailContainer = () => {
 
     return(
         <>
-            <ItemDetail listadoDetail={detail}/>
+            <ItemDetail {...detail}/>
         </>
     )
 }

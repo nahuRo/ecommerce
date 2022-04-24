@@ -9,11 +9,11 @@ export const CartContextProvider = ({ children }) => {
     const addProd = (prodToAdd) => {
         setCart([...cart, prodToAdd])
     }
+    
     const getCantidad = () => {
         let count = 0
         cart.forEach(prod => {
             count += prod.cantidad
-            console.log(prod.cantidad)
         })
         return count
     }

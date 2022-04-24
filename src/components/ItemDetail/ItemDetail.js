@@ -1,33 +1,33 @@
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
-const ItemDetail = ( {listadoDetail} ) => {
+const ItemDetail = ( {img, name, price, description, id} ) => {
 
 	const { addProd, IsInCart } = useContext(CartContext)
 
 	const cantidadProd = (cant) => {
-		addProd({...listadoDetail, cantidad:cant})
+		addProd({img, name, price, description, id, cantidad:cant})
 	}
 
   	return (
     // card del detalle
 		<div className="myCardDetail">
 			<div className="contImgCardDetail">
-				<img src={listadoDetail.img} alt={listadoDetail.name}/>
+				<img src={img} alt={name}/>
 			</div>
 			<div>
-				<h1>{listadoDetail.name}</h1>
-				<h4>${listadoDetail.price}</h4>
-				{listadoDetail.description}
+				<h1>{name}</h1>
+				<h4>${price}</h4>
+				{description}
 				<div className="contBtnCard">
 					<button>Comprar</button>
 				</div>
 			</div>
 			<div>
-				{ IsInCart(listadoDetail.id) ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
+				{ IsInCart(id) ? <NavLink to='/cart'>Ir a Carrito</NavLink> : <ItemCount initial={0} stock={4} onAdd={cantidadProd}/>}	
 			</div>
 		</div>
   	);

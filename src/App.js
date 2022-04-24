@@ -12,6 +12,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import AvisoLegal from "./components/Extras/AvisoLegal/AvisoLegal";
 import PolíticaDePrivacidad from "./components/Extras/PoliticaDePrivacidad/PoliticaDePrivacidad";
 import NotFound from "./components/Extras/NoFound/NotFound";
+import Cart from './components/Cart/Cart';
 
 import { CartContextProvider } from './context/CartContext';
 
@@ -22,7 +23,7 @@ function App() {
     return(
         <>
             <CartContextProvider>
-                <BrowserRouter> {/* lo dejo aca porque toda mi aplicaion va a trabajar con ReactRouter */}
+                <BrowserRouter> 
                     <NavBar/>
                     <Routes>
                         <Route path="/" element={<h1>Landing</h1>}/>
@@ -30,6 +31,8 @@ function App() {
                         <Route path="/list" element={<ItemListContainer/>}/>
                         <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
                         <Route path="/marca/:productMarc" element={<ItemListContainer/>}/>
+                        <Route path="/cart" element={<Cart/>}/>
+
                         
                         <Route path="/AvisoLegal" element={<AvisoLegal/>}/>
                         <Route path="/PoliticaDePrivacidad" element={<PolíticaDePrivacidad/>}/>
