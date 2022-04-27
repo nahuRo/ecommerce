@@ -13,6 +13,7 @@ import AvisoLegal from "./components/Extras/AvisoLegal/AvisoLegal";
 import PolíticaDePrivacidad from "./components/Extras/PoliticaDePrivacidad/PoliticaDePrivacidad";
 import NotFound from "./components/Extras/NoFound/NotFound";
 import Cart from './components/Cart/Cart';
+import Home from './components/Home/Home';
 
 import { CartContextProvider } from './context/CartContext';
 
@@ -26,7 +27,7 @@ function App() {
                 <BrowserRouter> 
                     <NavBar/>
                     <Routes>
-                        <Route path="/" element={<h1>Landing</h1>}/>
+                        <Route path="/" element={<Home/>}/>
 
                         <Route path="/list" element={<ItemListContainer/>}/>
                         <Route path="/detail/:productId" element={<ItemDetailContainer/>}/>
