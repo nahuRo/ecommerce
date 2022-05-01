@@ -20,7 +20,6 @@ const ItemCount = ({initial, stock, onAdd}) => {
             console.log(`no puede agregar un número negativo de productos`)
         }
     }
-
     return (
         <div className="count">
             <div>
