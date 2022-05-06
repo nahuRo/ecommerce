@@ -6,23 +6,19 @@ import { Link } from "react-router-dom"
 import { getDocs, writeBatch, query, collection, where, documentId, addDoc } from "firebase/firestore"
 import { firestoreDB } from "../../services/firebase/index"
 
-const Cart = () => {
-    const { cart, clearCart } = useContext(CartContext)
+import Formulario from "../Formulario/Formulario"
 
-    
+const Cart = () => {
+    const { cart, clearCart, user } = useContext(CartContext)
 
     const createOrder = () => {
         const ordenCompra = {
             items : cart,
-            comprador : {
-                name : "Agustin Rodriguez",
-                phone : 12345678732,
-                email : "aaaa@gmail.com"
-            },
+            comprador : user,
             total : 12222,
             date : new Date()
         }
-
+        
         const ids = cart.map(prod => prod.id)
 
         const batch = writeBatch(firestoreDB)
@@ -75,7 +71,10 @@ const Cart = () => {
             <div>
                 <button onClick={() => clearCart()}>Vaciar Carrito</button>
                 <button onClick={() => createOrder()}>Generar Pedido</button>
+            </div>
 
+            <div>
+                <Formulario/>
             </div>
         </>
     )
