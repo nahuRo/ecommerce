@@ -14,7 +14,7 @@
 .contImgCard img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .contDatesCard{
@@ -32,17 +32,15 @@
     height: 15%;
     text-align: center;
 }
-.contBtnCard > div{
-    width: 30%;
-}
-.contBtnCard button,.contBtnCard a{
+.contBtnCard a{
     padding: 10px;
     border: 1px solid #fff;
     border-radius: 5px;
-    background-color: #e5e7eb;
+    background-color:#3483fa;
     cursor: pointer;
     text-decoration: none;
+    color: #fff;
 }
-.contBtnCard button:hover,.contBtnCard a:hover{
-    background-color: #c7c9ce;
+.contBtnCard a:hover{
+    background-color:#244f90;
 }

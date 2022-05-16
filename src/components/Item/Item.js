@@ -2,9 +2,8 @@ import "./Item.css";
 import { Link } from 'react-router-dom'
 
 const Item = ({ id, name, img, price }) => {
-  	// desestructuro las propiedades que voy a usar
+
   	return (
-    // card del producto
     	<>
 			<div className="myCard">
 				<div className="contImgCard">
@@ -15,12 +14,7 @@ const Item = ({ id, name, img, price }) => {
 					<p>${price}</p>
 				</div>
 				<div className="contBtnCard">
-					<div>
-						<button>Comprar</button>
-					</div>	
-					<div>
-						<Link to={`/detail/${id}`}>Ver más</Link>
-					</div>
+					<Link to={`/detail/${id}`}>Ver más</Link>
 				</div>
 			</div>
     	</>

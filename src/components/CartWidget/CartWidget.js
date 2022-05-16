@@ -10,7 +10,7 @@ const CarWidget = () => {
     return(
         <div className = {`${getCantidad() === 0 ?'CartWidgetNone' : 'CartWidget' }`} >
             <Link to={"/cart"}><i className="fa-solid fa-cart-shopping"></i></Link>
-            {getCantidad()}
+            { getCantidad() }
         </div>
     ) 
 }

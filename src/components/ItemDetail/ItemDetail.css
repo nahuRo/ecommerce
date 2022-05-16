@@ -1,23 +1,205 @@
-.myCardDetail{
-    background: linear-gradient(to right, #ee9ca7, #ffdde1);;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
+.cardDetail{
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr;
+    /* grid-template-rows: 1fr 11fr; */
+    grid-template-areas: 
+    "img detail pay";
+}
+
+.cont__imgD{
+    grid-area: img;
+    max-width: 350px;
     margin: 0 auto;
 }
-.myCardDetail > div{
-    padding: 1rem;
-    width: 50%;
-}
-.contImgCardDetail{
-    padding: 5px;
-}
-.contImgCardDetail img{
+.cont__imgD img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
-h1{
-    font-size: 3rem;
+.cont__detailD{
+    grid-area: detail;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.cont__detailD .quality{
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+    font-weight: 400;
+    white-space: pre-wrap;
+    margin-bottom: 8px;
+}
+.cont__detailD .nameProd h2{
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+.cont__detailD .starsBox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.cont__detailD .starsBox .starsAmount{
+    margin-left: 0;
+    color: #3483fa;
+}
+.cont__detailD .starsBox .opiniosaAmount{
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.cont__detailD  .mostSellers{
+    margin-top: 10px;
+}
+.cont__detailD  .mostSellers > span:nth-child(1){
+    background-color: #ff7733;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 3px 4px;
+    font-weight: 500;
+    color: #fff;
+}
+.cont__detailD  .mostSellers > span:nth-child(2){
+    padding: 0 0 0 8px;
+    color: #3684fa;
+}
+.cont__detailD .priceProd{
+    margin-top: 16px;
+    font-weight: 300;
+}
+.cont__detailD .priceProd .numberProd{
+    font-size: 36px;
+    font-weight: 500;
+}
+.cont__detailD .priceProd .numberProd span{
+    padding-right: 0.2em;
+}
+.cont__detailD .priceProd .partsProd{
+    margin-top: 4px;
+    font-weight: 400;
+}
+.cont__detailD .colorProd{
+    margin-top: 32px;
+    font-size: 14px;
+}
+.cont__detailD .detailsProd{
+    margin-top: 32px;
+} 
+.cont__detailD .detailsProd p{
+    font-weight: 500;
+} 
+.cont__detailD .detailsProd .listDetails{
+    margin-top: 16px;
+}
+.cont__detailD .detailsProd .listDetails li{
+    line-height: 1.43em;
+    margin-top: 8px;
+    padding-left: 10px;
+    list-style-type: none;
+    font-size: 14px;
+    text-indent: -11px;
+}
+.cont__detailD .detailsProd .listDetails li::before{
+    content: "•";
+    font-size: 18px;
+    line-height: 14px;
+    padding-right: 5px;
+}
+.cont__payD{
+    grid-area: pay;
+}
+
+
+.cont__payD{
+    margin-top: 16px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 8px;
+    padding: 25px 16px;
+}
+
+.cont__payD .titleStock{
+    margin: 24px 0px 8px 0px;
+}
+.cont__payD .dropMenu span{ 
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 6px;
+}
+.cont__payD .btn__goCart{
+    margin-top: 22px;
+}
+.cont__payD .benefits{
+    margin-top: 24px;
+}
+.cont__payD .benefits ul{
+    text-indent: -28px;
+    font-size: 14px;
+}
+.cont__payD .benefits li{
+    list-style-type: none;
+    margin-bottom: 16px;
+}
+.cont__payD .benefits span{
+    color: #3483fa;
+}
+
+.cont__payD .benefits p{
+    color: rgba(0,0,0,.55);
+    font-size: 14px;
+    font-weight: 400;
+    display: inline;
+}
+.cont__payD .benefits .iconB{
+    margin: 10px 10px 0 0;
+    font-size: 18px;
+    line-height: 1;
+    
+}
+
+.cont__descriptionDP{
+    padding: 0px 45px;
+}
+.cont__descriptionDP::before{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 40px 0;
+    width: 76%;
+}
+
+.cont__descriptionDP h2{
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 24px;
+
+}
+.cont__descriptionDP .parrafDescription{
+    color: #666;
+    font-size: 20px;
+}
+
+@media all and (max-width: 767px) {
+    .cardDetail{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "img"
+        "detail" 
+        "pay";
+        padding: 1.5rem 0rem;
+    }
+    .cont__descriptionDP{
+        padding: 0px;
+    }
+    .cont__descriptionDP::before{
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        content: "";
+        display: block;
+        height: 1px;
+        margin: 40px 0;
+        width: 100%;
+    }
 }
