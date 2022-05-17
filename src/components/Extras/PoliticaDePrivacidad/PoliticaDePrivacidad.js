@@ -1,7 +1,7 @@
 
 const PolíticaDePrivacidad = () => {
   return (
-    <div style={{width:'80%', margin:'0 auto'}}>
+    <div className="container">
      <h1>Política de Privacidad</h1>
       <h2>I. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
       <h3>

@@ -1,9 +1,12 @@
 .CartWidget{
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 10px;
     border-radius: 7px;
     margin-right: 15px;
 }
 .CartWidgetNone{
     display: none;
+}
+.icon{
+    color: #000;
 }

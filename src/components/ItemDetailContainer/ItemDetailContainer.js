@@ -6,11 +6,11 @@ import { getDoc, doc } from 'firebase/firestore'
 import { firestoreDB } from '../../services/firebase'
 
 const ItemDetailContainer = () => {
-    const [detail, setDetail]=useState([]) //use el useState para guardar esos productos que recibo por la promesa
+    const [detail, setDetail]=useState([])
     const [loading, setLoading] = useState(true)
 
 
-    const { productId } = useParams() // es la propiedad que setea una ruta dinamica
+    const { productId } = useParams()
     
     useEffect(() => {
         setLoading(true)
@@ -34,7 +34,6 @@ const ItemDetailContainer = () => {
             </div>
         )
     }
-    console.log("DETAIL CONTAINER")
     return(
         <>
             <ItemDetail {...detail}/>

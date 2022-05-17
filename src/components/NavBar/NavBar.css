@@ -3,27 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-nav{
+.navBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #314247;
     height: 3rem;
+    font-size: 1rem;
 }
-nav a{
+.navBar a{
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
-.active{
-    background-color: #647973;
-    padding: 8px;
-    border-radius: 3px;
-    border: none;
-    color: #fff;
-}
-.notActive{
-    padding: 8px;
-    border-radius: 3px;
-    border: none;
+@media all and (max-width: 767px) {
+    .navBar{
+        font-size: 14px;
+    }
 }

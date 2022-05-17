@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Ecommerce - DiTech
+Agustín Rodriguez 🤓
+# Como es Empezar? 👇
+## 1 - Clonar repositorio
+Para empezar deberas clonar el repositorio, para el cual necesitaras el link del mismo
+```sh
+git clone  (mi repo)
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 2 - Instalacion de Dependecias
+Luego deberas acceder al repositorio que acabas de descargar, desde una terminal como git y en la carpeta donde se encuentra “package.json” ingresar el siguiente comando
+```sh
+npm install (comando para instalar las dependencias necesarias para poder ejecutar el sig comando)
+npm start (comando para lanzar la app)
+```
 
-## Available Scripts
+## Tecnologias utilizadas
+👉 HTML
+👉 CSS
+👉 JavaScript
+👉 React Js
 
-In the project directory, you can run:
+## Librerias
+👉  React-Icons
+👉  React-router-dom
+👉  Firebase
 
-### `npm start`
+## Estructura de Documentos en Firebase
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Cada producto tiene las siguientes características: 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+|    Campo      |   Tipo        |   Valor                       |
+| ------------- | ------------- | ----------------------------- |
+|  description  |   String      |   Descripción del Producto    |
+|   marca       |   String      |   Marca del Producto          |
+|   price       |   Number      |   Precio del Producto         |
+|   stock       |   Number      |   Stock del Producto          |
+|   img         |   String      |   Img del Producto            |
+|   name        |   String      |   Nombre del Producto         |
+|   Top         |   Number      |   Top de ventas del Producto  |
+|   features    |   Array       |   Caracteristicas del Producto|
+|   opinions    |   Number      |   Opiniones del Producto      |
 
-### `npm test`
+## Proceso de compra
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El inicio de la web app es la ruta '/' donde encontrarás una serie de cards/tarjetas con todos los productos, también podrás ver que en la barra de navegacion se encuentran los nombres de las distintas marcas de telefonos que vendemos. Podemos acceder a los teléfonos que son por ejemplo, solamente 'Samsung' clickeando en el boton correspodiente al nombre de la marca.
 
-### `npm run build`
+Cada card tiene un boton 'ver más', si hacemos click en el boton, vamos a acceder al detalle de cada producto en el cual se podran ver las características, nombre, precio y descripción entre otras cosas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Cabe recalcar que en un principio no podremos ver el widget del carrito ya que por medio de una función hicimos que si no hay productos comprados no se muestre el widget pero si lo hay que este si se muestre.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Una vez hayamos leído las características del producto y nos interese comprarlo, procedemos a elegir la cantidad y agregamos dicho producto al carrito con el boton 'agregar al carrito'. Ahora si podremos ver el widget del carrito y acceder a él para ver los productos que hemos agregamos agregado, como el precio total de la compra y un formulario para llenar con los datos del cliente. Podemos observar que no contamos con un boton para generar el pedido en el carrito, esto es porque primero debemos completar el formulario y una vez que carguemos los datos va a aparecer un boton que diga 'Generar Pedido' para generar la orden de compra.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Gif del Proyecto

@@ -2,18 +2,15 @@ import "./NavBar.css";
 
 import CartWidget from "../CartWidget/CartWidget";
 import { Link, NavLink } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 
 import { getDocs, collection } from 'firebase/firestore'
 import { firestoreDB } from '../../services/firebase'
-import UserContext from "../../context/UserContext";
+
 
 const NavBar = () => {
-  const { User } = useContext(UserContext)
   const [categories, setCategories] = useState([])
 
-  
-  console.log(User?.nombre)
 
   useEffect(() => {
     getDocs(collection(firestoreDB, 'categories',))
@@ -27,21 +24,15 @@ const NavBar = () => {
   }, [])
 
   return (
-    <nav className="">
+    <nav className="navBar">
       <div>
-        <Link to='/'>DiTech</Link> {/*link es como una etiqueta a y el to es como src*/}
+        <Link to='/'>DiTech</Link> 
       </div>
-      <div>
-        <NavLink to="/list" className={({ isActive}) => isActive ? 'active' : 'notActive'}>List</NavLink> {/*NavLink es como Link pero me deja usar una propiedad isActive*/}
+      <div className="linksBox">
         {categories.map(e => <NavLink to={`/marca/${e.description}`} key={e.id}>{e.description}</NavLink>)}
       </div>
       <div>
-        <div>
-          <Link to='/loginUi'>User: {User || "Nadie" }</Link>
-        </div>
-        <div>
           <CartWidget />
-        </div>
       </div>
     </nav>
   );

@@ -23,9 +23,7 @@ const ItemDetail = ( {img, name, price, description, id, stock, features, top, o
 		setCantToCart(cant)
 	}
 	
-	console.log("ITEM DETAIL");
   	return (
-    // card del detalle
 		<div className="container">
 			<div className="cardDetail">
 				<div className="cont__imgD">
@@ -63,7 +61,7 @@ const ItemDetail = ( {img, name, price, description, id, stock, features, top, o
 					</div>
 					<div className="detailsProd">
 						<p>Lo que tenés que saber de este producto</p>
-						<ul className="listDetails">{features.map(caract => <li>{caract}</li>)}</ul> 
+						<ul className="listDetails">{features.map(caract => <li key={caract}>{caract}</li>)}</ul> 
 					</div>
 				</div>
 				<div className="cont__payD">
@@ -96,7 +94,7 @@ const ItemDetail = ( {img, name, price, description, id, stock, features, top, o
 			</div>
 			<div className="cont__descriptionDP">
 				<h2>Descripción del Producto</h2>
-				<div>{description.split(".").map(par => <p className="parrafDescription">{par}.<br/><br/></p>)}</div>
+				<div>{description.split(".").map(par => <p className="parrafDescription" key={par}>{par}.<br/><br/></p>)}</div>
 			</div>
 		</div>
 		

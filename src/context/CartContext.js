@@ -6,11 +6,7 @@ export const CartContextProvider = ({ children }) => {
 
     const [ cart, setCart ] = useState([])
 
-    // const [ user, SetUser ] = useState({})
-
-
     const addProd = (prodToAdd) => {
-        // setCart([...cart, prodToAdd])
         if (IsInCart(prodToAdd.id)) {
             const newProds = cart.map( prod => {
                 if (prod.id === prodToAdd.id) {
@@ -28,7 +24,6 @@ export const CartContextProvider = ({ children }) => {
         }
     }
     
-    // funcion para saber la cantidad de items en el widget del carrito
     const getCantidad = () => {
         let count = 0
         cart.forEach(prod => {
@@ -61,10 +56,6 @@ export const CartContextProvider = ({ children }) => {
         return total
     }
 
-    // const UserInfo = (datos) => {
-    //     SetUser(datos)
-    // }
-
     return (
         <CartContext.Provider value={{ 
             cart, 
@@ -75,8 +66,6 @@ export const CartContextProvider = ({ children }) => {
             removeProd,
             getProdCantidad,
             getTotal,
-            // UserInfo,
-            // user
         }}>
             {children}
         </CartContext.Provider>

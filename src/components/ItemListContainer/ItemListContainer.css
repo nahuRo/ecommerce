@@ -1,3 +1,11 @@
+.cont__Prod{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #f3f4f6;
+}
 .cont_loading{
     min-height: 100vh;
     display: flex;
@@ -39,3 +47,5 @@
         transform: translateY(-50px) scaleX(1)
     }
 }
+
+

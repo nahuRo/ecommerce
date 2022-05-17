@@ -1,6 +1,6 @@
 const AvisoLegal = () => {
   return (
-    <div style={{ width: "80%", margin: "0 auto" }}>
+    <div className="container">
       <h1>Aviso Legal</h1>
       <h2>I. INFORMACIÓN GENERAL</h2>
       <h3>

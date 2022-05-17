@@ -3,31 +3,24 @@ import { useContext } from 'react'
 import CartContext from '../../context/CartContext'
 
 import { IoIosClose } from "react-icons/io";
-import ItemCount from '../ItemCount/ItemCount';
-
 
 const ItemCart = ({ name, img, price, cantidad, id }) => {
 
     const { removeProd } = useContext(CartContext)
-    console.log("CART ITEM")
+
     return(
         <>
             <div className="BoxViewCartProd">
                 <div className="Cont__ImgProd">
-                    <img src={img} alt="" />
+                    <img src={img} alt={name} />
                 </div>
                 <div className="Cont__datailsProd">
                     <div className='Cont__nameProd'>
-                        <h2>{name}</h2>
-                        <p>{cantidad}</p>
+                        <h3>{name}</h3>
                     </div>
                     <div className="Cont__cantProd">
-                        <div>
-                            {/* <ItemCount/> */}
-                        {/* <ItemCount initial={0} stock={stock} onAdd={cantidadProd}/> */}
-                        </div>
                         <div className='Cont__Price'>
-                            <h2><span>$</span>{price}</h2>
+                            <span>{cantidad} x ${price}</span>
                         </div>
                     </div> 
                 </div>
