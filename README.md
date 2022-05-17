@@ -1,6 +1,8 @@
 # Ecommerce - DiTech
 Agustín Rodriguez 🤓
-# Como es Empezar? 👇
+> Proyecto realizado para el curso de React JS.
+
+## Como Empezar? 👇
 ## 1 - Clonar repositorio
 Para empezar deberas clonar el repositorio, para el cual necesitaras el link del mismo
 ```sh
@@ -43,12 +45,15 @@ npm start (comando para lanzar la app)
 
 ## Proceso de compra
 
-El inicio de la web app es la ruta '/' donde encontrarás una serie de cards/tarjetas con todos los productos, también podrás ver que en la barra de navegacion se encuentran los nombres de las distintas marcas de telefonos que vendemos. Podemos acceder a los teléfonos que son por ejemplo, solamente 'Samsung' clickeando en el boton correspodiente al nombre de la marca.
+El inicio de la web app es la ruta '/' donde encontrarás una serie de cards/tarjetas con todos los productos ( ItemListContainer ), también podrás ver que en la barra de navegacion ( NavBar ), en donde se encuentran los nombres de las distintas marcas de telefonos que vendemos. Podemos acceder a los teléfonos que son por ejemplo, solamente 'Samsung' clickeando en el boton correspodiente al nombre de la marca.
 
-Cada card tiene un boton 'ver más', si hacemos click en el boton, vamos a acceder al detalle de cada producto en el cual se podran ver las características, nombre, precio y descripción entre otras cosas.
+Cada card tiene un boton 'ver más', si hacemos click en el boton, vamos a acceder al detalle de cada producto en el cual se podran ver las características, nombre, precio y descripción entre otras cosas ( ItemDetailContainer - ItemList - Item ).
 
-Cabe recalcar que en un principio no podremos ver el widget del carrito ya que por medio de una función hicimos que si no hay productos comprados no se muestre el widget pero si lo hay que este si se muestre.
+Cabe recalcar que en un principio no podremos ver el widget del carrito ( CartWidget ) ya que por medio de una función hicimos que si no hay productos comprados no se muestre el widget pero si lo hay que este si se muestre.
 
-Una vez hayamos leído las características del producto y nos interese comprarlo, procedemos a elegir la cantidad y agregamos dicho producto al carrito con el boton 'agregar al carrito'. Ahora si podremos ver el widget del carrito y acceder a él para ver los productos que hemos agregamos agregado, como el precio total de la compra y un formulario para llenar con los datos del cliente. Podemos observar que no contamos con un boton para generar el pedido en el carrito, esto es porque primero debemos completar el formulario y una vez que carguemos los datos va a aparecer un boton que diga 'Generar Pedido' para generar la orden de compra.
+Una vez hayamos leído las características del producto y nos interese comprarlo, procedemos a elegir la cantidad y agregamos dicho producto al carrito con el boton 'agregar al carrito'( ItemCount ). Ahora si podremos ver el widget del carrito y acceder a él para ver los productos que hemos agregamos agregado ( ItemCart ), como el precio total de la compra y un formulario para llenar con los datos del cliente ( Cart ). Podemos observar que no contamos con un boton para generar el pedido en el carrito, esto es porque primero debemos completar el formulario y una vez que carguemos los datos va a aparecer un boton que diga 'Generar Pedido' para generar la orden de compra.
+
+( ... ) -> componente/s 
 
 ## Gif del Proyecto
+![Alt text](https://github.com/nahuRo/ecommerce/blob/RamaAdd/src/docs/React-app.gif)
